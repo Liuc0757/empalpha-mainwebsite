@@ -1,0 +1,11 @@
+import { spawn } from 'node:child_process';
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const local = process.argv.includes('--local');
+const port = process.env.PORT || (local ? '3100' : '3000');
+const host = local ? '127.0.0.1' : process.env.HOST || '0.0.0.0';
+if (!/^\d+$/.test(port) || Number(port) < 1 || Number(port) > 65535) throw new Error('PORT must be 1–65535.');
+const server = spawn(process.execPath, [require.resolve('next/dist/bin/next'), 'start', '--hostname', host, '--port', port], { stdio: 'inherit', env: { ...process.env, NODE_ENV: 'production' } });
+for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => server.kill(signal));
+server.on('error', error => { console.error(error.message); process.exitCode = 1; });
+server.on('exit', code => { process.exitCode = code ?? 1; });

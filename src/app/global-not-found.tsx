@@ -1,0 +1,4 @@
+import './globals.css';
+import { ConfiguredLink } from '@/components/site/ConfiguredLink';
+export const metadata = {title:'404 | EMP Signals',robots:{index:false,follow:false}};
+export default function NotFound(){return <html lang="en"><body><main className="wrap section error-page"><p className="eyebrow">EMP SIGNALS / 404</p><h1>That page isn’t here.</h1><p lang="zh-CN">页面不存在。请选择首页或查看快速入门。</p><div className="hero-actions"><a href="/" className="button primary">English home</a><a href="/zh" className="button">中文首页</a><a href="/start" className="button">Quick start</a></div><ConfiguredLink linkKey="support" locale="en" explain>Contact support</ConfiguredLink><p className="disclaimer">Technical analysis signals. Not investment advice. No guaranteed returns or accuracy.</p></main></body></html>}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "path": "/assets/approved/favicon.svg",
+      "source": "Original code-drawn EMP portal mark, derived from the handoff visual baseline",
+      "purpose": "site-icon",
+      "publicationApproved": true,
+      "width": 64,
+      "height": 64,
+      "sha256": "f9a32de797c81ef8e0b99eb6c9b63a79b6ebbd7ed2879ce725778600b5922a68"
+    },
+    {
+      "path": "/assets/approved/chart-en-goog.jpeg",
+      "source": "Selected existing English GOOG historical chart",
+      "purpose": "indicator-chart",
+      "publicationApproved": true,
+      "sha256": "a911058228a22fd1351d682f57f7e4e116b8c7d91fc2b96517eda5af8d2bdf8e",
+      "width": 1146,
+      "height": 777,
+      "selectionBasis": "Current configured page requested as deployable repository source on 2026-10-28; full handoff is not included.",
+      "locale": "en"
+    },
+    {
+      "path": "/assets/approved/chart-zh-aapl.png",
+      "source": "Owner-supplied Chinese AAPL chart, 2026-10-28",
+      "purpose": "indicator-chart",
+      "publicationApproved": true,
+      "sha256": "e641efe13ed3d88be680eb0a18d0386d6e6178af1fb227dd8ed1963abb62b8eb",
+      "width": 2236,
+      "height": 1486,
+      "selectionBasis": "Current configured page requested as deployable repository source on 2026-10-28; full handoff is not included.",
+      "locale": "zh"
+    },
+    {
+      "path": "/assets/approved/bot-avatar-reference.png",
+      "source": "Owner-supplied NVDA message reference used only as CSS avatar background, 2026-10-28",
+      "purpose": "message-avatar",
+      "publicationApproved": true,
+      "sha256": "fc0932c8e70e1604e760e98489d71aa16ed195606371ded349c0782ea77c3125",
+      "width": 1164,
+      "height": 416,
+      "selectionBasis": "Current configured page requested as deployable repository source on 2026-10-28; full handoff is not included."
+    }
+  ]
+}

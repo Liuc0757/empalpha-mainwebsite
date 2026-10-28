@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Static examples for a product website; not a signal feed or current market data.",
+  "historical": {
+    "id": "aapl-sell-2026-10-24",
+    "kind": "historical",
+    "sourceId": "S",
+    "publicationApproved": true,
+    "symbol": "AAPL",
+    "direction": "SELL",
+    "timezone": null,
+    "timePolicy": "Preserve the supplied display strings; do not infer UTC or convert timezones.",
+    "ordinarySignal": {
+      "timeframe": "1H",
+      "signalPrice": 214.86,
+      "priceLabel": "Signal Price",
+      "triggeredDisplay": "2026-10-26 22:30",
+      "sourceUrl": null,
+      "symbol": "NVDA",
+      "direction": "BUY",
+      "triggeredDisplayChinese": "2026年10月26日星期一 22:30",
+      "messageSentDisplay": "2026/10/26 22:30",
+      "sourceId": "user-2026-10-28-image-1"
+    },
+    "apex": {
+      "coverage": 5,
+      "totalTimeframes": 5,
+      "matchedTimeframes": [
+        "1H",
+        "2H",
+        "3H",
+        "4H",
+        "1D"
+      ],
+      "rollingWindowHours": 168,
+      "windowStartDisplay": "2026-10-17 01:30",
+      "windowEndDisplay": "2026-10-24 01:30",
+      "sourceUrl": null,
+      "evidence": [
+        {
+          "timeframe": "1H",
+          "recordedDisplay": "2026-10-24 00:30",
+          "sourceUrl": null
+        },
+        {
+          "timeframe": "2H",
+          "recordedDisplay": "2026-10-24 01:30",
+          "sourceUrl": null
+        },
+        {
+          "timeframe": "3H",
+          "recordedDisplay": "2026-10-17 03:30",
+          "sourceUrl": null
+        },
+        {
+          "timeframe": "4H",
+          "recordedDisplay": "2026-10-20 01:30",
+          "sourceUrl": null
+        },
+        {
+          "timeframe": "1D",
+          "recordedDisplay": "2026-10-21 04:01",
+          "sourceUrl": null
+        }
+      ],
+      "sourceId": "user-2026-10-28-image-2"
+    },
+    "contextNote": "Independent examples: NVDA ordinary BUY on 2026-10-26 and AAPL APEX SELL in its supplied seven-day window. Do not join them into one event."
+  },
+  "illustrativeScenarios": [
+    {
+      "id": "demo-3",
+      "kind": "illustrative",
+      "symbol": "DEMO",
+      "direction": "SELL",
+      "matchedTimeframes": [
+        "1H",
+        "2H",
+        "1D"
+      ],
+      "coverage": 3,
+      "reachesAnnouncedThreshold": false,
+      "sourceId": "D",
+      "publicationApproved": true,
+      "timezone": null
+    },
+    {
+      "id": "demo-4",
+      "kind": "illustrative",
+      "symbol": "DEMO",
+      "direction": "SELL",
+      "matchedTimeframes": [
+        "1H",
+        "2H",
+        "4H",
+        "1D"
+      ],
+      "coverage": 4,
+      "reachesAnnouncedThreshold": true,
+      "sourceId": "D",
+      "publicationApproved": true,
+      "timezone": null
+    },
+    {
+      "id": "demo-5",
+      "kind": "illustrative",
+      "symbol": "DEMO",
+      "direction": "SELL",
+      "matchedTimeframes": [
+        "1H",
+        "2H",
+        "3H",
+        "4H",
+        "1D"
+      ],
+      "coverage": 5,
+      "reachesAnnouncedThreshold": true,
+      "sourceId": "D",
+      "publicationApproved": true,
+      "timezone": null
+    }
+  ],
+  "illustrativeDisclaimer": "Rule demonstration, not an actual historical notification. No signals are generated or sent."
+}

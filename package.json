@@ -1,0 +1,40 @@
+{
+  "name": "empalpha-mainwebsite",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3102",
+    "start": "node scripts/start.mjs",
+    "build": "npm run check:config && npm run check:content && npm run check:assets && next build --webpack && npm run check:assets",
+    "release": "node --import ./scripts/load-env.mjs --import tsx scripts/release.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src scripts tests --max-warnings 0",
+    "test": "node --import ./scripts/load-env.mjs --import tsx --test tests/unit.test.ts",
+    "test:e2e": "playwright test",
+    "check:config": "node --import ./scripts/load-env.mjs --import tsx scripts/check-config.ts",
+    "check:production": "node --import ./scripts/load-env.mjs --import tsx scripts/check-config.ts --mode production",
+    "check:assets": "node --import ./scripts/load-env.mjs --import tsx scripts/check-public-assets.ts",
+    "check:content": "node --import ./scripts/load-env.mjs --import tsx scripts/check-content.ts",
+    "start:local": "node scripts/start.mjs --local"
+  },
+  "dependencies": {
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.3",
+    "lighthouse": "13.5.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3"
+  }
+}
